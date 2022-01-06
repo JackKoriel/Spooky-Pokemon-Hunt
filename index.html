@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Nyan Kat</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press Start 2P"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/CSS/style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="timer" id="timer">00:00:00</div>
+      <div id="app" class="app"></div>
+      <button id="start-button" class="button" type="button">Start</button>
+      <div class="instructions">
+        <div>Press the button to start and P to pause game and music</div>
+        <div>Press the arrow buttons to move left and right</div>
+        <div>Press the space bar or arrow up to shoot</div>
+        <div class="feature">
+          Discover a hidden feature by pressing the space bar several times
+          while moving around then starting the game
+        </div>
+      </div>
+    </div>
+    <div id="popup" class="popup">
+      <div class="popup__content">
+        <h1 class="popup__title">GAME OVER</h1>
+        <div class="popup__text">
+          Congrats! you caught
+          <span id="score-result"></span>
+          Gengars in only
+          <span id="time-result"></span>
+          Gary did much better though... as always.
+        </div>
+        <button id="restart" class="button popup__button" type="button">
+          play again
+        </button>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/top.js"></script>
+    <script src="js/Projectile.js"></script>
+    <script src="js/Enemy.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/score.js"></script>
+    <script src="js/lives.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/engine-utilities.js"></script>
+    <script src="js/Text.js"></script>
+    <script src="js/Engine.js"></script>
+    <script src="js/Player.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

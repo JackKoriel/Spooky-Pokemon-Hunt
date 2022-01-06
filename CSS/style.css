@@ -1,0 +1,121 @@
+body {
+  font-family: "Press Start 2P", cursive;
+  margin: 0;
+}
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.app {
+  font-family: "Press Start 2P", cursive;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+.button {
+  font-size: 24px;
+  font-family: "Press Start 2P", cursive;
+  color: #251f46;
+  text-transform: lowercase;
+  background-color: white;
+  border: 3px solid #251f46;
+  box-shadow: -3px 4px 0px 0px #251f46;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  cursor: pointer;
+  padding: 16px 32px;
+}
+.button:hover {
+  transform: translateY(2px);
+  box-shadow: 0px 0px 0px 0px #251f46;
+}
+.button:active {
+  /* outline: none; */
+  color: white;
+  background-color: #251f46;
+}
+/* .button:focus {
+  outline: none;
+} */
+
+.instructions {
+  margin-top: 32px;
+  align-items: center;
+  text-align: center;
+}
+.instructions > div {
+  padding: 8px;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(211, 91, 11, 0.75);
+  z-index: 10;
+}
+.popup.visible {
+  display: flex;
+}
+.popup__content {
+  width: 460px;
+  background-color: white;
+  padding: 40px 40px 56px;
+}
+.popup__title {
+  text-align: center;
+  color: #251f46;
+  margin-bottom: 48px;
+}
+.popup__text {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+.popup__text span {
+  text-shadow: 1px 1px #970974;
+}
+.popup__button {
+  display: block;
+  margin: 48px auto 0;
+}
+.timer {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.score {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 32px;
+  /* font-weight: 700; */
+  color: white;
+}
+.lives {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 32px;
+  /* font-weight: 700; */
+  color: white;
+}
+.start__in {
+  font-family: "Press Start 2P";
+  font-size: 16px;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.feature {
+  font-size: xx-small;
+  padding-top: 30px;
+}
