@@ -1,6 +1,11 @@
 // We create an instance of the Engine class. Looking at our index.html,
 // we see that it has a div with an id of `"app"`
 const buttonStart = document.getElementById("start-button");
+const buttonPause = document.getElementById("pause-button");
+const buttonMute = document.getElementById("mute-button");
+const buttonLeft = document.getElementById("left-button");
+const buttonRight = document.getElementById("right-button");
+const buttonShoot = document.getElementById("shoot-button");
 const gameEngine = new Engine(document.getElementById("app"));
 let isPaused = false;
 const audio = new Audio("audio/rocket.mp3");
@@ -48,10 +53,36 @@ const startHandler = () => {
   isPaused = false;
   audio.play();
 };
+const leftHandler = () => {
+  gameEngine.player.moveLeft();
+};
+const rightHandler = () => {
+  gameEngine.player.moveRight();
+};
+const shootHandler = () => {
+  let bullet = gameEngine.player.shoot();
+  if (!bullet) {
+    return;
+  }
+  gameEngine.projectiles.push(bullet);
+};
+const pauseHandler = () => {
+  gameEngine.pause();
+  isPaused = true;
+  audio.pause();
+};
+const muteHandler = () => {
+  audio.muted = !audio.muted;
+};
 
 // We add an event listener to document. document the ancestor of all DOM nodes in the DOM.
 document.addEventListener("keydown", keydownHandler);
 buttonStart.addEventListener("click", startHandler);
+buttonPause.addEventListener("click", pauseHandler);
+buttonMute.addEventListener("click", muteHandler);
+buttonLeft.addEventListener("click", leftHandler);
+buttonRight.addEventListener("click", rightHandler);
+buttonShoot.addEventListener("click", shootHandler);
 // We call the gameLoop method to start the game
 // gameEngine.gameLoop();
 
