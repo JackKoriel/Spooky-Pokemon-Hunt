@@ -14,15 +14,6 @@ class Text {
     div.style.font = "bold 30px Impact";
     div.style.zIndex = 2000;
     div.style.fontFamily = `Press Start 2P`;
-    // const link = document.createElement("link");
-    // link.setAttribute("rel", "stylesheet");
-    // link.setAttribute("type", "text/css");
-    // link.setAttribute(
-    //   "href",
-    //   "https://fonts.googleapis.com/css2?family=Press Start 2P"
-    // );
-    // document.head.appendChild(link);
-
     root.appendChild(div);
 
     this.domElement = div;

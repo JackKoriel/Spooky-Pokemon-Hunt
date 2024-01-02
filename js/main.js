@@ -46,12 +46,6 @@ const keydownHandler = (event) => {
     gameEngine.projectiles.push(bullet);
   }
 };
-// console.log(gameEngine.lives.lives);
-// if (gameEngine.lives.lives === 0) {
-//   gameEngine.pause();
-//   document.removeEventListener("keydown", keydownHandler);
-// }
-
 const toggleHandler = () => {
   if (isPaused) {
     startHandler();
@@ -100,16 +94,8 @@ const muteHandler = () => {
 // We add an event listener to document. document the ancestor of all DOM nodes in the DOM.
 document.addEventListener("keydown", keydownHandler);
 buttonStart.addEventListener("click", toggleHandler);
-// buttonStart.addEventListener("click", startHandler);
-// buttonPause.addEventListener("click", pauseHandler);
+
 buttonMute.addEventListener("click", muteHandler);
 buttonLeft.addEventListener("click", leftHandler);
 buttonRight.addEventListener("click", rightHandler);
 buttonShoot.addEventListener("click", shootHandler);
-// We call the gameLoop method to start the game
-// gameEngine.gameLoop();
-
-// const gameText = new Text(document.getElementById("app"), 10, 10);
-// gameText.update("Score");
-// gameEngine.countDownTimer();
-// setTimeout(gameEngine.gameLoop, 4000);

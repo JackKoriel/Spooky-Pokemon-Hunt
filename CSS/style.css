@@ -33,14 +33,9 @@ body {
   box-shadow: 0px 0px 0px 0px #251f46;
 }
 .button:active {
-  /* outline: none; */
   color: white;
   background-color: #251f46;
 }
-/* .button:focus {
-  outline: none;
-} */
-
 .instructions {
   margin-top: 32px;
   align-items: center;
@@ -49,7 +44,6 @@ body {
 .instructions > div {
   padding: 8px;
 }
-
 .popup {
   display: none;
   position: absolute;
@@ -97,7 +91,6 @@ body {
   top: 12px;
   left: 12px;
   font-size: 32px;
-  /* font-weight: 700; */
   color: white;
 }
 .lives {
@@ -105,7 +98,6 @@ body {
   top: 12px;
   right: 12px;
   font-size: 32px;
-  /* font-weight: 700; */
   color: white;
 }
 .start__in {
@@ -136,7 +128,6 @@ body {
   border-radius: 20px;
   text-align: center;
 }
-
 .controls_text {
   color: #251f46;
   font-weight: bold;
