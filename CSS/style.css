@@ -141,3 +141,10 @@ body {
   color: #251f46;
   font-weight: bold;
 }
+
+#start_text {
+  display: block;
+}
+#pause_text {
+  display: none;
+}
