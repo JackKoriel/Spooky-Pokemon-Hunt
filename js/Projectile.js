@@ -4,7 +4,7 @@ class Projectile {
     this.y = y;
     this.destroyed = false;
     this.domElement = document.createElement("img");
-    this.domElement.src = "images/ball2.gif";
+    this.domElement.src = "images/ball.gif";
     this.domElement.style.position = "absolute";
     this.domElement.style.left = `${this.x}px`;
     this.domElement.style.top = ` ${this.y}px`;

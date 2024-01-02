@@ -36,7 +36,7 @@ class Enemy {
     this.domElement = document.createElement("img");
 
     // We give it a src attribute to specify which image to display.
-    this.domElement.src = "./images/new.gif";
+    this.domElement.src = "./images/enemy.gif";
     // We modify the CSS style of the DOM node.
     this.domElement.style.position = "absolute";
     this.domElement.style.left = `${this.x}px`;
