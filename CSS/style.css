@@ -119,3 +119,25 @@ body {
   font-size: xx-small;
   padding-top: 30px;
 }
+#mute_icon {
+  position: absolute;
+  top: 50px;
+  right: 12px;
+  font-size: 32px;
+  display: none;
+}
+
+.button_container {
+  margin-top: 20px;
+  background-color: #8272da;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.controls_text {
+  color: #251f46;
+  font-weight: bold;
+}

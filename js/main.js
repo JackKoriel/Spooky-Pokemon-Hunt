@@ -3,6 +3,7 @@
 const buttonStart = document.getElementById("start-button");
 const buttonPause = document.getElementById("pause-button");
 const buttonMute = document.getElementById("mute-button");
+const iconMute = document.getElementById("mute_icon");
 const buttonLeft = document.getElementById("left-button");
 const buttonRight = document.getElementById("right-button");
 const buttonShoot = document.getElementById("shoot-button");
@@ -71,8 +72,13 @@ const pauseHandler = () => {
   isPaused = true;
   audio.pause();
 };
+let muteFlag = false;
 const muteHandler = () => {
   audio.muted = !audio.muted;
+  muteFlag = !muteFlag;
+  muteFlag
+    ? (iconMute.style.display = "block")
+    : (iconMute.style.display = "none");
 };
 
 // We add an event listener to document. document the ancestor of all DOM nodes in the DOM.
