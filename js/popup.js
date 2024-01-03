@@ -10,6 +10,7 @@ class Popup {
     this.timeResults.innerText = time;
     this.popup.classList.add("visible");
     this.addEventListeners();
+    audio.pause();
   };
   addEventListeners = () => {
     this.buttonRestart.addEventListener("click", () => {
