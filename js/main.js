@@ -10,9 +10,12 @@ const buttonShoot = document.getElementById("shoot-button");
 const iconMute = document.getElementById("mute_icon");
 const startText = document.getElementById("start_text");
 const pauseText = document.getElementById("pause_text");
+const controlsContainer = document.querySelectorAll(".button_container button");
+
 let isPaused = true;
 const audio = new Audio("audio/rocket.mp3");
 audio.volume = 0.1;
+let lastTouchTime = 0;
 // keydownHandler is a variable that refers to a function. The function has one parameter
 // (does the parameter name matter?) which is called event. As we will see below, this function
 // will be called every time the user presses a key. The argument of the function call will be an object.
@@ -91,6 +94,19 @@ const muteHandler = () => {
     ? (iconMute.style.display = "block")
     : (iconMute.style.display = "none");
 };
+controlsContainer.forEach((button) => {
+  button.addEventListener("touchstart", function (event) {
+    if (event.touches.length > 1) {
+      return;
+    }
+    let now = new Date().getTime();
+
+    if (now - lastTouchTime <= 300) {
+      event.preventDefault();
+    }
+    lastTouchTime = now;
+  });
+});
 // We add an event listener to document. document the ancestor of all DOM nodes in the DOM.
 document.addEventListener("keydown", keydownHandler);
 buttonStart.addEventListener("click", toggleHandler);
