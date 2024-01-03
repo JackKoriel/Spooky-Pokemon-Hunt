@@ -119,7 +119,6 @@ body {
   font-size: 32px;
   display: none;
 }
-
 .button_container {
   margin-top: 20px;
   background-color: #8272da;
@@ -134,10 +133,15 @@ body {
   color: #251f46;
   font-weight: bold;
 }
-
 #start_text {
   display: block;
 }
 #pause_text {
+  display: none;
+}
+#mute_text {
+  display: block;
+}
+#unmute_text {
   display: none;
 }

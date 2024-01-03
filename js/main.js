@@ -10,12 +10,15 @@ const buttonShoot = document.getElementById("shoot-button");
 const iconMute = document.getElementById("mute_icon");
 const startText = document.getElementById("start_text");
 const pauseText = document.getElementById("pause_text");
+const muteText = document.getElementById("mute_text");
+const unmuteText = document.getElementById("unmute_text");
 const controlsContainer = document.querySelectorAll(".button_container button");
 
 let isPaused = true;
 const audio = new Audio("audio/rocket.mp3");
 audio.volume = 0.1;
 let lastTouchTime = 0;
+let muteFlag = false;
 // keydownHandler is a variable that refers to a function. The function has one parameter
 // (does the parameter name matter?) which is called event. As we will see below, this function
 // will be called every time the user presses a key. The argument of the function call will be an object.
@@ -86,13 +89,18 @@ const shootHandler = () => {
   }
   gameEngine.projectiles.push(bullet);
 };
-let muteFlag = false;
 const muteHandler = () => {
   audio.muted = !audio.muted;
   muteFlag = !muteFlag;
-  muteFlag
-    ? (iconMute.style.display = "block")
-    : (iconMute.style.display = "none");
+  if (muteFlag) {
+    iconMute.style.display = "block";
+    muteText.style.display = "none";
+    unmuteText.style.display = "block";
+  } else {
+    iconMute.style.display = "none";
+    muteText.style.display = "block";
+    unmuteText.style.display = "none";
+  }
 };
 controlsContainer.forEach((button) => {
   button.addEventListener("touchstart", function (event) {
@@ -100,7 +108,7 @@ controlsContainer.forEach((button) => {
       return;
     }
     let now = new Date().getTime();
-
+    // We add an event listener to document. document is the ancestor of all DOM nodes in the DOM.
     if (now - lastTouchTime <= 300) {
       event.preventDefault();
     }
