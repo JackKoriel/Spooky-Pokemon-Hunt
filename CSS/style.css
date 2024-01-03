@@ -27,6 +27,7 @@ body {
   transition: transform 0.1s ease, box-shadow 0.1s ease;
   cursor: pointer;
   padding: 16px 32px;
+  touch-action: manipulation;
 }
 .button:hover {
   transform: translateY(2px);
@@ -127,6 +128,7 @@ body {
   padding-bottom: 30px;
   border-radius: 20px;
   text-align: center;
+  touch-action: manipulation;
 }
 .controls_text {
   color: #251f46;
